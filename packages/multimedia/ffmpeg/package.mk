@@ -18,6 +18,9 @@
 
 PKG_NAME="ffmpeg"
 PKG_VERSION="2.6.4"
+if [ "$MEDIACENTER" = "plexht" ]; then
+  PKG_VERSION="0.10.16"
+fi
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="LGPLv2.1+"
@@ -54,6 +57,9 @@ if [ "$DCADEC_SUPPORT" = yes ]; then
   FFMPEG_LIBDCADEC="--enable-libdcadec"
 else
   FFMPEG_LIBDCADEC="--disable-libdcadec"
+fi
+if [ "$MEDIACENTER" = "plexht" ]; then
+  FFMPEG_LIBDCADEC=""
 fi
 
 if [ "$DEBUG" = yes ]; then
@@ -180,6 +186,7 @@ configure_target() {
               --enable-parsers \
               --enable-bsfs \
               --enable-protocol=http \
+              --enable-protocol=https \
               --disable-indevs \
               --disable-outdevs \
               --enable-filters \
