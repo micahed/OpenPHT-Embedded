@@ -74,24 +74,8 @@ rm -rf $BASEDIR/$LOGDIR
 mkdir -p $BASEDIR/$LOGDIR
 
 # kodi.log
-  KODI_LOG_DIR=/storage/.kodi/temp
-
-  LOGFILE="01_KODI.log"
-  for i in kodi.log kodi.old.log; do
-    [ -f ${KODI_LOG_DIR}/${i} ] && getlog_cmd cat ${KODI_LOG_DIR}/$i
-  done
-
-  LOGFILE="01_KODI_CRASH.log"
-  for i in `find ${KODI_LOG_DIR} -type f -name "kodi_crashlog_*.log" | sort -r`; do
-    getlog_cmd cat $i
-  done
-
-  LOGFILE="01_KODI_OTHER.log"
-  for i in `find ${KODI_LOG_DIR} -type f -name "*.log" | sort`; do
-    iname="${i#${KODI_LOG_DIR}/}"
-    [ ${iname} == kodi.log ] && continue
-    [ ${iname} == kodi.old.log ] && continue
-    [ "${iname#kodi_crashlog_}" != "${iname}" ] && continue
+  LOGFILE="01_PHT.log"
+  for i in `find /storage/.plexht/temp/ -type f -name "*.log"`; do
     getlog_cmd cat $i
   done
 
@@ -179,8 +163,8 @@ mkdir -p $BASEDIR/$LOGDIR
 
 # addons
   LOGFILE="11_Addons.log"
-  for i in /storage/.kodi/userdata/addon_data/*/*.log \
-      /storage/.kodi/userdata/addon_data/*/log/* \
+  for i in /storage/.plexht/userdata/addon_data/*/*.log \
+      /storage/.plexht/userdata/addon_data/*/log/* \
   ; do
     if [ -f "$i" ] ; then
       getlog_cmd cat $i
