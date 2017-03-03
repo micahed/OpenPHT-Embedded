@@ -16,7 +16,7 @@ PKG_CONFIGURE_OPTS_TARGET="WPASUPPLICANT=/usr/bin/wpa_supplicant \
                            --disable-debug \
                            --disable-hh2serial-gps \
                            --disable-openconnect \
-                           --disable-openvpn \
+                           --enable-openvpn --with-openvpn=/usr/sbin/openvpn \
                            --disable-vpnc \
                            --disable-l2tp \
                            --disable-pptp \
@@ -46,6 +46,7 @@ PKG_CONFIGURE_OPTS_TARGET="WPASUPPLICANT=/usr/bin/wpa_supplicant \
                            --disable-silent-rules"
 
 PKG_MAKE_OPTS_TARGET="storagedir=/storage/.cache/connman \
+                      vpn_storagedir=/storage/.config/vpn-config \
                       statedir=/run/connman"
 
 post_makeinstall_target() {
