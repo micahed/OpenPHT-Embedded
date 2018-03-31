@@ -177,7 +177,7 @@ make_host() {
 }
 
 makeinstall_host() {
-  cp -PR TexturePacker $ROOT/$TOOLCHAIN/bin
+  cp -PR TexturePacker $TOOLCHAIN/bin
 }
 
 configure_target() {
@@ -203,7 +203,7 @@ if [ "$KODIPLAYER_DRIVER" = bcm2835-driver ]; then
         -DEXTERNAL_PYTHON_HOME="$SYSROOT_PREFIX/usr" \
         -DPYTHON_EXEC="$PYTHON_EXEC" \
         -DSWIG_EXECUTABLE=`which swig` \
-        -DSWIG_DIR="$ROOT/$BUILD/toolchain" \
+        -DSWIG_DIR="$BUILD/toolchain" \
         -DCMAKE_PREFIX_PATH="$SYSROOT_PREFIX" \
         -DCMAKE_LIBRARY_PATH="$SYSROOT_PREFIX/usr/lib" \
         -DCMAKE_INCLUDE_PATH="$SYSROOT_PREFIX/usr/include;$SYSROOT_PREFIX/usr/include/interface/vmcs_host/linux;$SYSROOT_PREFIX/usr/include/interface/vcos/pthreads;$SYSROOT_PREFIX/usr/include/python2.7" \
@@ -224,7 +224,7 @@ elif [ "$KODIPLAYER_DRIVER" = libamcodec ]; then
         -DEXTERNAL_PYTHON_HOME="$SYSROOT_PREFIX/usr" \
         -DPYTHON_EXEC="$PYTHON_EXEC" \
         -DSWIG_EXECUTABLE=`which swig` \
-        -DSWIG_DIR="$ROOT/$BUILD/toolchain" \
+        -DSWIG_DIR="$BUILD/toolchain" \
         -DCMAKE_PREFIX_PATH="$SYSROOT_PREFIX" \
         -DCMAKE_LIBRARY_PATH="$SYSROOT_PREFIX/usr/lib" \
         -DCMAKE_INCLUDE_PATH="$SYSROOT_PREFIX/usr/include;$SYSROOT_PREFIX/usr/include/python2.7" \
@@ -245,7 +245,7 @@ else
         -DEXTERNAL_PYTHON_HOME="$SYSROOT_PREFIX/usr" \
         -DPYTHON_EXEC="$PYTHON_EXEC" \
         -DSWIG_EXECUTABLE=`which swig` \
-        -DSWIG_DIR="$ROOT/$BUILD/toolchain" \
+        -DSWIG_DIR="$BUILD/toolchain" \
         -DCMAKE_PREFIX_PATH="$SYSROOT_PREFIX" \
         -DCMAKE_LIBRARY_PATH="$SYSROOT_PREFIX/usr/lib" \
         -DCMAKE_INCLUDE_PATH="$SYSROOT_PREFIX/usr/include;$SYSROOT_PREFIX/usr/include/python2.7" \
@@ -269,7 +269,7 @@ make_target() {
   SKIN_DIR="skin.`tolower $SKIN_DEFAULT`"
 
 # setup default skin inside the sources
-  sed -i -e "s|skin.confluence|$SKIN_DIR|g" $ROOT/$PKG_BUILD/xbmc/settings/Settings.h
+  sed -i -e "s|skin.confluence|$SKIN_DIR|g" $PKG_BUILD/xbmc/settings/Settings.h
 
   ninja -j$CONCURRENCY_MAKE_LEVEL
 
