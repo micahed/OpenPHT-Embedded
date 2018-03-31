@@ -80,12 +80,12 @@ post_makeinstall_target() {
     cp -PR $PKG_DIR/config/* $INSTALL/usr/config
 
   mkdir -p $INSTALL/usr/config/bluetooth
-    cp -PR $ROOT/$PKG_BUILD/src/main.conf $INSTALL/usr/config/bluetooth
-    sed -i $INSTALL/usr/config/bluetooth/main.conf \
-        -e "s|^#\[Policy\]|\[Policy\]|g" \
-        -e "s|^#AutoEnable.*|AutoEnable=true|g"
-    cp -PR $ROOT/$PKG_BUILD/profiles/proximity/proximity.conf $INSTALL/usr/config/bluetooth
-    cp -PR $ROOT/$PKG_BUILD/profiles/network/network.conf $INSTALL/usr/config/bluetooth
+    #cp -PR $ROOT/$PKG_BUILD/src/main.conf $INSTALL/usr/config/bluetooth
+    #sed -i $INSTALL/usr/config/bluetooth/main.conf \
+    #    -e "s|^#\[Policy\]|\[Policy\]|g" \
+    #    -e "s|^#AutoEnable.*|AutoEnable=true|g"
+#    cp -PR $ROOT/$PKG_BUILD/profiles/proximity/proximity.conf $INSTALL/usr/config/bluetooth
+#    cp -PR $ROOT/$PKG_BUILD/profiles/network/network.conf $INSTALL/usr/config/bluetooth
 }
 
 post_install() {
