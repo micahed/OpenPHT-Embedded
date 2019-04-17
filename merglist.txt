@@ -1,0 +1,30 @@
+* 244a5af9ee - (origin/openpht-1.9, origin/HEAD, openpht-1.9) Add patch notes file to show how i merged (1 year ago) <Dale Hamel>
+* ecce4e1988 - SKIPPED - gcc: update to 6.3.0 (1 year ago) <Jonas Karlman>
+* 2448adacca - SKIPPED - new project: Intel_EGL (1 year ago) <Jonas Karlman>
+* 0119b736ef - SKIPPED - WeTek_Core: use some aarch64 patches (1 year ago) <Jonas Karlman>
+* fe5d2e6f72 - SKIPPED - WeTek_Play_2: add plexht support (1 year ago) <Jonas Karlman>
+* f7fd80bd19 - SKIPPED - WeTek_Hub: add plexht support (1 year ago) <Jonas Karlman>
+* 7a1b6d2fb0 - SKIPPED - Odroid_C2: add plexht support (1 year ago) <Jonas Karlman>
+* d754fc43e0 - SKIPPED - WeTek_Play: add plexht support (1 year ago) <Jonas Karlman>
+* ebb5bf573c - SKIPPED - WeTek_Core: add plexht support (1 year ago) <Jonas Karlman>
+* 1e7bd5e1ab - applied with minor conflicts - rasplex
+* ace5ace0d1 - applied with minor conflicts - openpht
+* 9e4e4e748e - applied
+* 8f7364ac45 - applied
+* 8012d1f294 - SKIPPED - for now bluez: use userspace hid (1 year ago) <Jonas Karlman>
+* 9f5498d9d4 - manually applied
+* aaf9ab2db4 - applied
+* 9cb1f1d591 - applied
+* f6ec0b24a6 - Added plex in this, said there were conflicts but there weren't
+* b576f7a4c6 - applied
+* 59618df84f - Reverted ffmpeg to this exact revision
+* 2fef5407da - applied
+* d20b9a7919 - applied, conflicts resolved
+* b5c2c6f463 - added upstream, not applied
+* c3c76d2385 - applied
+* cfa2c2aa79 - added upstream, not applied
+* d59022d1c0 - applied
+* 384f28aa1c - applied
+* 0518042d2b - Doesn't apply cleanly
+* 79b2bd1ee9 - noop
+* 9efdeb5b7d - noop
