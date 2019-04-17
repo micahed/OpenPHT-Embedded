@@ -25,3 +25,6 @@ distclean:
 
 src-pkg:
 	tar cvJf sources.tar.xz sources .stamps
+
+docker:
+	docker run --name rasplex-build -v"$$(pwd)"://app --entrypoint '/bin/sleep' -h rasplex-build -d rasplex-build infinity
