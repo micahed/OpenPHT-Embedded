@@ -84,10 +84,10 @@ pre_configure_target() {
   rm -rf .$TARGET_NAME
 
 # ffmpeg fails building for x86_64 with LTO support
-  strip_lto
+  #strip_lto
 
 # ffmpeg fails running with GOLD support
-  strip_gold
+  #strip_gold
 
 
   if [ "$KODIPLAYER_DRIVER" = "bcm2835-driver" ]; then
