@@ -1,0 +1,24 @@
+diff --git a/gold/descriptors.cc b/gold/descriptors.cc
+index 92fd42f41f..d5cc9fc4c9 100644
+--- a/gold/descriptors.cc
++++ b/gold/descriptors.cc
+@@ -26,6 +26,7 @@
+ #include <cstdio>
+ #include <cstring>
+ #include <fcntl.h>
++#include <string>
+ #include <unistd.h>
+ 
+ #include "debug.h"
+
+diff -u -r binutils-2.27/gold/errors.h new-binutils-2.27/gold/errors.h
+--- binutils-2.27/gold/errors.h 2016-08-03 08:36:53.000000000 +0100
++++ new-binutils-2.27/gold/errors.h     2021-10-06 22:07:56.778493000 +0100
+@@ -26,6 +26,7 @@
+ #include <cstdarg>
+
+ #include "gold-threads.h"
++#include <string>
+
+ namespace gold
+ {
