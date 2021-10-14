@@ -1,0 +1,11 @@
+diff -r -u orig-parted-3.2/libparted/arch/linux.c parted-3.2/libparted/arch/linux.c
+--- orig-parted-3.2/libparted/arch/linux.c	2021-10-07 15:07:06.958192956 +0100
++++ parted-3.2/libparted/arch/linux.c	2021-10-07 15:08:27.010108028 +0100
+@@ -37,6 +37,7 @@
+ #include <dirent.h>
+ #include <sys/ioctl.h>
+ #include <sys/stat.h>
++#include <sys/sysmacros.h>
+ #include <sys/types.h>
+ #include <sys/utsname.h>        /* for uname() */
+ #include <scsi/scsi.h>
