@@ -69,6 +69,7 @@ makeinstall_target() {
                                 --with-thread \
                                 --with-iostreams \
                                 --with-system \
+                                --with-timer \
                                 --with-serialization \
                                 --with-filesystem \
                                 --with-regex -sICU_PATH="$SYSROOT_PREFIX/usr" \
