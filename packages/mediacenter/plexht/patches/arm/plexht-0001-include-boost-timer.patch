@@ -1,0 +1,11 @@
+--- orig-plexht-1.9/plex/CMakeModules/PlatformConfigRPI.cmake	2021-10-15 10:42:44.996788339 +0100
++++ plexht-1.9/plex/CMakeModules/PlatformConfigRPI.cmake	2021-10-15 10:28:38.995934800 +0100
+@@ -55,7 +55,7 @@
+   plex_find_package(${l} 1 1)
+ endforeach()
+ 
+-find_package(Boost COMPONENTS thread system REQUIRED)
++find_package(Boost COMPONENTS thread system timer REQUIRED)
+ if(Boost_FOUND)
+   include_directories(${Boost_INCLUDE_DIRS})
+   list(APPEND CONFIG_PLEX_LINK_LIBRARIES ${Boost_LIBRARIES})
